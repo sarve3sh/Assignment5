@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
-import { UserContext } from "@/context";
+import { UserContext, useUserState } from "@/context/UserContext";
 
 type UserProviderProps = {
   children: ReactNode;
 };
 
 export const UserProvider = ({ children }: UserProviderProps) => {
-  return <UserContext.Provider value={undefined}>{children}</UserContext.Provider>;
+  const value = useUserState();
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

@@ -10,7 +10,7 @@ export const HomeView = () => {
         <section className="space-y-8 text-center">
           <h1 className="font-bold text-5xl tracking-tight">TMDB Explorer</h1>
           <p className="text-gray-400 text-lg">Explore movies and discover people using a fast, modern interface.</p>
-          <Button onClick={() => navigate("/")}>Enter</Button>
+          <Button onClick={() => navigate("/movies/category/now_playing")}>Enter</Button>
         </section>
       </main>
     </div>
